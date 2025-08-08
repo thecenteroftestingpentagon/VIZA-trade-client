@@ -1,5 +1,8 @@
 "use client"
 
+"use client";
+"use client"
+
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"

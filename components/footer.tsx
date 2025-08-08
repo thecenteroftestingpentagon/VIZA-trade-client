@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,9 +14,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-20 h-20 flex items-center justify-center"> {/* Big logo for footer */}
-                <img 
-                  src="/assets/icon.png" 
-                  alt="VIZA TRADE Logo" 
+                <img
+                  src="/assets/icon.png"
+                  alt="VIZA TRADE Logo"
                   className="w-full h-full object-contain"
                 />
               </div>

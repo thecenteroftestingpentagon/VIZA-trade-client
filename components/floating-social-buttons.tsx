@@ -1,5 +1,6 @@
 "use client"
 
+"use client"
 import React, { useState } from "react"
 import { MessageCircle, Instagram, X } from "lucide-react"
 
@@ -22,9 +23,8 @@ export default function FloatingSocialButtons() {
       <div className="flex flex-col items-end gap-3">
         {/* Instagram Button */}
         <div
-          className={`transition-all duration-300 ${
-            isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-          }`}
+          className={`transition-all duration-300 ${isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+            }`}
         >
           <button
             onClick={handleInstagramClick}
@@ -37,9 +37,8 @@ export default function FloatingSocialButtons() {
 
         {/* WhatsApp Button */}
         <div
-          className={`transition-all duration-300 ${
-            isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-          }`}
+          className={`transition-all duration-300 ${isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+            }`}
         >
           <button
             onClick={handleWhatsAppClick}
@@ -53,9 +52,8 @@ export default function FloatingSocialButtons() {
         {/* Main Toggle Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className={`w-14 h-14 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 ${
-            isExpanded ? 'rotate-45' : 'rotate-0'
-          }`}
+          className={`w-14 h-14 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 ${isExpanded ? 'rotate-45' : 'rotate-0'
+            }`}
           aria-label="Toggle social media options"
         >
           {isExpanded ? (

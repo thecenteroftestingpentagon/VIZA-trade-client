@@ -1,5 +1,4 @@
 "use client"
-
 import type React from "react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from "@/components/ui/dropdown-menu"
@@ -22,9 +21,9 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="w-28 h-28 flex items-center justify-center"> {/* Even bigger logo */}
-              <img 
-                src="/assets/icon.png" 
-                alt="VIZA TRADE Logo" 
+              <img
+                src="/assets/icon.png"
+                alt="VIZA TRADE Logo"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -67,7 +66,7 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <Button 
+          <Button
             className="bg-orange-500 hover:bg-orange-600 text-white"
             onClick={() => {
               const element = document.getElementById('consultation-form');
@@ -264,14 +263,14 @@ function ServicesDropdown() {
                 service.value === "translation"
                   ? "/document-translation"
                   : service.value === "attestation"
-                  ? "/attestation-services"
-                  : service.value === "insurance"
-                  ? "/travel-insurance"
-                  : service.value === "ielts"
-                  ? "/ielts-preparation"
-                  : service.value === "job-search"
-                  ? "/job-search"
-                  : "/services"
+                    ? "/attestation-services"
+                    : service.value === "insurance"
+                      ? "/travel-insurance"
+                      : service.value === "ielts"
+                        ? "/ielts-preparation"
+                        : service.value === "job-search"
+                          ? "/job-search"
+                          : "/services"
               }
               className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50"
             >
@@ -299,9 +298,8 @@ function NavItem({
   return (
     <Link
       href={href}
-      className={`px-4 py-2 text-sm font-medium flex items-center transition-colors ${
-        active ? "bg-orange-500 text-white" : "text-gray-200 hover:bg-teal-700/50 hover:text-white"
-      }`}
+      className={`px-4 py-2 text-sm font-medium flex items-center transition-colors ${active ? "bg-orange-500 text-white" : "text-gray-200 hover:bg-teal-700/50 hover:text-white"
+        }`}
     >
       {children}
       {hasDropdown && <ChevronDown className="ml-1 h-4 w-4" />}

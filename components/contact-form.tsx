@@ -1,5 +1,6 @@
 "use client"
 
+"use client"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,18 +19,18 @@ export default function ContactForm() {
     service: "",
     message: ""
   })
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const countries = [
-    "United States", "Canada", "Australia", "United Kingdom", "Germany", 
-    "France", "Netherlands", "Singapore", "New Zealand", "UAE", 
+    "United States", "Canada", "Australia", "United Kingdom", "Germany",
+    "France", "Netherlands", "Singapore", "New Zealand", "UAE",
     "Qatar", "Saudi Arabia", "Japan", "South Korea", "Italy", "Spain", "Mexico"
   ]
 
   const services = [
-    "Work Visa", "Study Visa", "Tourist Visa", "Business Visa", 
+    "Work Visa", "Study Visa", "Tourist Visa", "Business Visa",
     "Family Visa", "Permanent Residency", "Citizenship", "Other"
   ]
 
@@ -44,7 +45,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       alert("Please fill in all required fields")
       return
@@ -78,13 +79,13 @@ export default function ContactForm() {
           service: "",
           message: ""
         })
-        
+
         // Optional: Redirect to WhatsApp
         setTimeout(() => {
           const whatsappMessage = `Hi! I just submitted a contact form. My inquiry: ${formData.message.substring(0, 100)}...`
           window.open(`https://wa.me/8160050554?text=${encodeURIComponent(whatsappMessage)}`, '_blank')
         }, 2000)
-        
+
       } else {
         throw new Error(result.error || 'Failed to submit form')
       }
@@ -102,9 +103,9 @@ export default function ContactForm() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Big logo for contact form */}
-              <img 
-                src="/assets/icon.png" 
-                alt="VIZA TRADE Logo" 
+              <img
+                src="/assets/icon.png"
+                alt="VIZA TRADE Logo"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -208,8 +209,8 @@ export default function ContactForm() {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-green-600 hover:bg-green-700 text-white py-3 disabled:opacity-50"
                     disabled={isSubmitting}
                   >
@@ -245,7 +246,7 @@ export default function ContactForm() {
                   <CardTitle className="text-2xl text-white">Get in Touch</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <button 
+                  <button
                     onClick={() => window.open('tel:8160050554', '_self')}
                     className="flex items-center gap-4 w-full text-left hover:bg-white/5 p-2 rounded transition-colors"
                   >
@@ -258,7 +259,7 @@ export default function ContactForm() {
                     </div>
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => window.open('mailto:main.vizatradee@gmail.com', '_self')}
                     className="flex items-center gap-4 w-full text-left hover:bg-white/5 p-2 rounded transition-colors"
                   >
@@ -271,7 +272,7 @@ export default function ContactForm() {
                     </div>
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => window.open('https://maps.google.com/?q=210, Raghuvir City Centre, Anand, Gujarat', '_blank')}
                     className="flex items-center gap-4 w-full text-left hover:bg-white/5 p-2 rounded transition-colors"
                   >
@@ -305,7 +306,7 @@ export default function ContactForm() {
                   <p className="text-gray-300 mb-4">
                     We respond to all inquiries within 2 hours during business hours!
                   </p>
-                  <Button 
+                  <Button
                     className="w-full bg-green-600 hover:bg-green-700"
                     onClick={() => window.open('https://wa.me/8160050554?text=Hi! I need assistance with visa services.', '_blank')}
                   >

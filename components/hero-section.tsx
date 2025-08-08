@@ -1,5 +1,6 @@
 "use client"
 
+"use client"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import ConsultationForm from "@/components/consultation-form"
@@ -55,9 +56,9 @@ export default function HeroSection() {
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4"> {/* Big logo for hero section */}
-              <img 
-                src="/assets/icon.png" 
-                alt="VIZA TRADE Logo" 
+              <img
+                src="/assets/icon.png"
+                alt="VIZA TRADE Logo"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -84,14 +85,14 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button 
+            <Button
               size="lg"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => window.open('https://wa.me/8160050554?text=Hi! I want to start my visa journey with VIZA TRADE', '_blank')}
             >
               🚀 Start Your Journey
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-black px-8 py-4 text-lg font-semibold transition-all duration-300"

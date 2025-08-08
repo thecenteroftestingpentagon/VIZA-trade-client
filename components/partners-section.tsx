@@ -1,4 +1,6 @@
+"use client";
 export default function SuccessStoriesSection() {
+  "use client";
   const successStories = [
     {
       id: 1,
@@ -77,7 +79,7 @@ export default function SuccessStoriesSection() {
                   <p className="text-sm text-gray-400">Passport Stamp</p>
                 </div>
               </div>
-              
+
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-white">{story.clientName}</h3>
@@ -85,10 +87,10 @@ export default function SuccessStoriesSection() {
                     {story.country}
                   </span>
                 </div>
-                
+
                 <p className="text-sm text-teal-400 font-medium">{story.visaType}</p>
                 <p className="text-gray-300 text-sm">{story.description}</p>
-                
+
                 <div className="flex items-center gap-2 text-xs text-gray-400">
                   <span>✅ Visa Approved</span>
                   <span>•</span>

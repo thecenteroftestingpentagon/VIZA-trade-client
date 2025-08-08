@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -32,11 +31,10 @@ export default function ServicesSection() {
             <Button
               key={tab.id}
               variant={activeTab === tab.id ? "default" : "outline"}
-              className={`gap-2 ${
-                activeTab === tab.id
-                  ? "bg-green-500 hover:bg-green-600 text-white"
-                  : "border-teal-700/50 text-gray-300 hover:text-white hover:bg-teal-800/50"
-              }`}
+              className={`gap-2 ${activeTab === tab.id
+                ? "bg-green-500 hover:bg-green-600 text-white"
+                : "border-teal-700/50 text-gray-300 hover:text-white hover:bg-teal-800/50"
+                }`}
               onClick={() => setActiveTab(tab.id)}
             >
               <tab.icon className="h-4 w-4" />
@@ -183,3 +181,4 @@ function ServiceCard({
     </motion.div>
   )
 }
+

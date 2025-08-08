@@ -1,3 +1,4 @@
+"use client";
 "use client"
 
 import type React from "react"
@@ -28,7 +29,7 @@ export default function ConsultationForm({ compact = false }: { compact?: boolea
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    
+
     // Validate contact number
     if (name === "contactNo") {
       // Only allow digits and limit to 10 characters
@@ -82,7 +83,7 @@ export default function ConsultationForm({ compact = false }: { compact?: boolea
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validate contact number length
     if (formData.contactNo.length !== 10) {
       alert("Contact number must be exactly 10 digits")
@@ -152,14 +153,14 @@ Please confirm my consultation booking and provide further details.`
           consultationType: "call",
           countries: [],
         })
-        
+
         // Show success message
         alert('Thank you! Your consultation has been booked successfully. You will receive a confirmation email shortly.')
-        
+
         // Optional: Redirect to WhatsApp for immediate assistance
         const whatsappMessage = `Hi! I just booked a consultation for ${getServiceName(formData.service)}. My booking details: Date: ${formData.date ? format(formData.date, 'PPP') : ''}, Time: ${timeSlots.find(slot => slot.value === formData.time)?.label || ''}`
         window.open(`https://wa.me/8160050554?text=${encodeURIComponent(whatsappMessage)}`, '_blank')
-        
+
       } else {
         throw new Error(result.error || 'Failed to submit consultation booking')
       }
@@ -187,15 +188,15 @@ Please confirm my consultation booking and provide further details.`
   return (
     <div id="consultation-form" className="bg-slate-800/50 backdrop-blur-md rounded-lg border border-teal-800/50 p-6 shadow-lg">
       <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Big logo for form */}
-        <img 
-          src="/assets/icon.png" 
-          alt="VIZA TRADE Logo" 
+        <img
+          src="/assets/icon.png"
+          alt="VIZA TRADE Logo"
           className="w-full h-full object-contain"
         />
       </div>
 
       <div className="flex items-center justify-center mb-6">
-        
+
         <h2 className={`${compact ? "text-xl" : "text-2xl"} font-bold text-white`}>Book Free Consultation</h2>
       </div>
 
@@ -302,8 +303,8 @@ Please confirm my consultation booking and provide further details.`
             </SelectTrigger>
             <SelectContent className="bg-slate-800 border-teal-700/50">
               {timeSlots.map((slot) => (
-                <SelectItem 
-                  key={slot.value} 
+                <SelectItem
+                  key={slot.value}
                   value={slot.value}
                   className="text-white hover:bg-slate-700 focus:bg-slate-700"
                 >
@@ -382,8 +383,8 @@ Please confirm my consultation booking and provide further details.`
           </div>
         </div>
 
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           className="w-full bg-orange-500 hover:bg-orange-600 text-white py-6 disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={isSubmitting}
         >
