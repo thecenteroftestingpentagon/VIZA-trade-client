@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/placeholder.svg?height=800&width=1200')",
+            backgroundImage: "url('/sample.png?height=800&width=1200')",
             filter: "brightness(0.4) saturate(0.8)",
           }}
         ></div>
