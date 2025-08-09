@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
     {
       name: "Rajesh Patel",
       location: "Anand, Gujarat",
-      image: "/sample.png?height=100&width=100",
+      image: "/ ?height=100&width=100",
       text: "Being from Anand, I was worried about finding reliable visa consultancy services locally. VIZA TRADE exceeded my expectations! Their team helped me secure my Canada PR within 8 months. Their office is conveniently located and the staff is very professional.",
       rating: 5,
       service: "Canada PR Visa",
@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
     {
       name: "Priya Shah",
       location: "Anand, Gujarat",
-      image: "/sample.png?height=100&width=100",
+      image: "?height=100&width=100",
       text: "As a local student from Anand, I was confused about studying abroad. VIZA TRADE guided me step by step and helped me get admission to University of Melbourne. Their personalized approach and local understanding made all the difference!",
       rating: 5,
       service: "Study Visa - Australia",
@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
     {
       name: "Kiran Modi",
       location: "Anand, Gujarat",
-      image: "/sample.png?height=100&width=100",
+      image: "/ ?height=100&width=100",
       text: "I work in Anand's dairy industry and wanted to explore opportunities in New Zealand. VIZA TRADE helped me understand the entire process and successfully got my work visa. Their expertise in agricultural sector visas is excellent!",
       rating: 5,
       service: "Work Visa - New Zealand",
@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
     {
       name: "Sneha Desai",
       location: "Anand, Gujarat",
-      image: "/sample.png?height=100&width=100",
+      image: "/ ?height=100&width=100",
       text: "My husband and I from Anand wanted to visit our relatives in the USA. VIZA TRADE made the tourist visa process so smooth. They understand the local community needs and provide excellent support in Gujarati too!",
       rating: 5,
       service: "Tourist Visa - USA",
@@ -52,7 +52,7 @@ export default function TestimonialsSection() {
     {
       name: "Mehul Patel",
       location: "Anand, Gujarat",
-      image: "/sample.png?height=100&width=100",
+      image: "/ ?height=100&width=100",
       text: "Being a local businessman in Anand, I needed help with business visa for Germany. VIZA TRADE's team provided excellent guidance and handled all documentation perfectly. Great to have such professional service right here in Anand!",
       rating: 5,
       service: "Business Visa - Germany",
@@ -100,12 +100,8 @@ export default function TestimonialsSection() {
 
                     <div className="flex flex-col md:flex-row gap-6 items-start relative z-10">
                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-green-400">
-                          <img
-                            src={testimonial.image || "/sample.png"}
-                            alt={testimonial.name}
-                            className="w-full h-full object-cover"
-                          />
+                        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-green-400 flex items-center justify-center bg-slate-700/50">
+                          <span className="text-green-400 text-2xl font-bold">{testimonial.name.charAt(0)}</span>
                         </div>
                       </div>
 

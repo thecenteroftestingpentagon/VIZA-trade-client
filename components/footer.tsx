@@ -13,12 +13,8 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-20 h-20 flex items-center justify-center"> {/* Big logo for footer */}
-                <img
-                  src="/assets/icon.png"
-                  alt="VIZA TRADE Logo"
-                  className="w-full h-full object-contain"
-                />
+              <div className="w-20 h-20 flex items-center justify-center"> {/* Replaced image with text logo */}
+                <span className="text-green-400 text-2xl font-bold">VIZA</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">
@@ -102,15 +98,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white mb-6">Visa Services</h3>
             <ul className="space-y-3">
-              {["Tourist Visa", "Business Visa", "Student Visa", "Work Visa", "Family Visa", "PR Visa"].map(
-                (service, index) => (
+              {[
+                { service: "Tourist Visa", href: "/visa/tourist" },
+                { service: "Business Visa", href: "/visa/business" },
+                { service: "Student Visa", href: "/visa/study" },
+                { service: "Work Visa", href: "/visa/work" },
+                { service: "Family Visa", href: "/visa/family" },
+                { service: "PR Visa", href: "/visa/pr" },
+              ].map(
+                (item, index) => (
                   <li key={index}>
                     <Link
-                      href="/visa"
+                      href={item.href}
                       className="text-gray-300 hover:text-green-400 transition-colors flex items-center gap-2"
                     >
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                      {service}
+                      {item.service}
                     </Link>
                   </li>
                 ),
@@ -137,14 +140,21 @@ export default function Footer() {
               </div>
 
               <div className="flex space-x-4">
-                {["facebook", "twitter", "instagram", "linkedin"].map((social, index) => (
+                {[
+                  { name: "facebook", url: "https://www.facebook.com/vizatrade" },
+                  { name: "twitter", url: "https://twitter.com/vizatrade" },
+                  { name: "instagram", url: "https://www.instagram.com/viza.trade27" },
+                  { name: "linkedin", url: "https://www.linkedin.com/company/vizatrade" }
+                ].map((social, index) => (
                   <a
                     key={index}
-                    href="#"
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-green-500 transition-colors duration-300"
                   >
-                    <span className="sr-only">{social}</span>
-                    <div className="w-4 h-4 bg-white mask-image-[url('/icons/${social}.svg')]"></div>
+                    <span className="sr-only">{social.name}</span>
+                    <div className="w-4 h-4 text-white flex items-center justify-center">{social.name.charAt(0).toUpperCase()}</div>
                   </a>
                 ))}
               </div>
@@ -156,13 +166,13 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Viza Trade. All rights reserved.</p>
 
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-green-400 text-sm">
+            <Link href="/privacy-policy" className="text-gray-400 hover:text-green-400 text-sm">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-green-400 text-sm">
+            <Link href="/terms-of-service" className="text-gray-400 hover:text-green-400 text-sm">
               Terms of Service
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-green-400 text-sm">
+            <Link href="/sitemap.xml" className="text-gray-400 hover:text-green-400 text-sm">
               Sitemap
             </Link>
           </div>

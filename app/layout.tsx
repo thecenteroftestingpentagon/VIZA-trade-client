@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '../styles/globals.css'
 import ClientWrapper from '@/components/client-wrapper'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   title: 'VIZA TRADE - Global Trade Simplified Visas',
@@ -17,11 +18,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head />
-      <body>
-        {children}
-        <ClientWrapper />
+      <body className="min-h-screen bg-background font-sans antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <ClientWrapper />
+        </ThemeProvider>
       </body>
     </html>
   )

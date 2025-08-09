@@ -19,12 +19,11 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-slate-900/90"></div>
 
-        {/* City background with overlay */}
+        {/* City background replaced with gradient */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/sample.png?height=800&width=1200')",
-            filter: "brightness(0.4) saturate(0.8)",
+            background: "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(13, 148, 136, 0.2) 100%)",
           }}
         ></div>
 
@@ -55,15 +54,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4"> {/* Big logo for hero section */}
-              <img
-                src="/assets/icon.png"
-                alt="VIZA TRADE Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold">
+              <h1 className="text-3xl md:text-5xl font-bold">
                 <span className="text-green-400">VIZA</span> TRADE
               </h1>
               <p className="text-sm text-gray-400">Global Trade Simplified Visas</p>

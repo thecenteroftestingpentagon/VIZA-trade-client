@@ -6,6 +6,8 @@ import { useState, useEffect } from "react"
 import LoadingScreen from "@/components/loading-screen"
 import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
+import ParticlesBackground from "@/components/ParticlesBackground"
+import GlowEffect from "@/components/GlowEffect"
 import ServicesSection from "@/components/services-section"
 import StatsSection from "@/components/stats-section"
 import TestimonialsSection from "@/components/testimonials-section"
@@ -30,17 +32,24 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">
+    <main>
+      {/* Animated background layers */}
+      <div className="background-container">
+        {/* Background replaced with particle animation only */}
+        {/* Particle animation */}
+        <ParticlesBackground />
+      </div>
+      {/* Mouse glow effect */}
+      <GlowEffect />
+      {/* Page content */}
       <Header />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <StatsSection />
-        <TestimonialsSection />
-        <SuccessStoriesSection />
-        <FaqSection />
-      </main>
+      <HeroSection />
+      <ServicesSection />
+      <StatsSection />
+      <TestimonialsSection />
+      <SuccessStoriesSection />
+      <FaqSection />
       <Footer />
-    </div>
+    </main>
   )
 }

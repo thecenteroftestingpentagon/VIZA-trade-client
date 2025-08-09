@@ -20,12 +20,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-28 h-28 flex items-center justify-center"> {/* Even bigger logo */}
-              <img
-                src="/assets/icon.png"
-                alt="VIZA TRADE Logo"
-                className="w-full h-full object-contain"
-              />
+            <div className="w-28 h-28 flex items-center justify-center"> {/* Replaced image with text logo */}
+              <span className="text-green-400 text-2xl font-bold">VIZA</span>
             </div>
             <div>
               <h1 className="text-3xl font-bold"> {/* Even bigger font size */}
@@ -132,7 +128,7 @@ function VisaDropdown() {
         <DropdownMenuSeparator className="bg-teal-700/50" />
         {visaTypes.map((visa) => (
           <DropdownMenuItem key={visa.value} asChild>
-            <Link href={`/visa#${visa.value}`} className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
+            <Link href={`/visa/${visa.value}`} className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
               <span className="text-sm">{visa.icon}</span>
               {visa.name}
             </Link>
@@ -220,7 +216,22 @@ function ImmigrationDropdown() {
         <DropdownMenuSeparator className="bg-teal-700/50" />
         {immigrationServices.map((service) => (
           <DropdownMenuItem key={service.value} asChild>
-            <Link href={`/immigration#${service.value}`} className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
+            <Link
+              href={
+                service.value === "pr"
+                  ? "/permanent-residency"
+                  : service.value === "citizenship"
+                    ? "/citizenship"
+                    : service.value === "express-entry"
+                      ? "/express-entry"
+                      : service.value === "pnp"
+                        ? "/provincial-nominee"
+                        : service.value === "family"
+                          ? "/family-sponsorship"
+                          : "/immigration"
+              }
+              className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50"
+            >
               <span className="text-sm">{service.icon}</span>
               {service.name}
             </Link>

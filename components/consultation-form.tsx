@@ -187,12 +187,8 @@ Please confirm my consultation booking and provide further details.`
 
   return (
     <div id="consultation-form" className="bg-slate-800/50 backdrop-blur-md rounded-lg border border-teal-800/50 p-6 shadow-lg">
-      <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Big logo for form */}
-        <img
-          src="/assets/icon.png"
-          alt="VIZA TRADE Logo"
-          className="w-full h-full object-contain"
-        />
+      <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Replaced logo with text */}
+        <span className="text-green-400 text-2xl font-bold">VIZA</span>
       </div>
 
       <div className="flex items-center justify-center mb-6">

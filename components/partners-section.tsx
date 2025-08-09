@@ -8,7 +8,7 @@ export default function SuccessStoriesSection() {
       country: "Canada",
       visaType: "Work Visa",
       description: "Successfully obtained work visa for software engineer position in Toronto",
-      image: "/assets/placeholder-passport.jpg" // Placeholder until you provide actual stamps
+      image: "/placeholder-user.jpg" // Use available placeholder image
     },
     {
       id: 2,
@@ -71,12 +71,9 @@ export default function SuccessStoriesSection() {
               key={story.id}
               className="bg-slate-800/30 backdrop-blur-sm rounded-lg border border-teal-800/30 p-6 hover:border-green-400/50 transition-all duration-300"
             >
-              <div className="aspect-video bg-slate-700/50 rounded-lg mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <span className="text-2xl">📘</span>
-                  </div>
-                  <p className="text-sm text-gray-400">Passport Stamp</p>
+              <div className="aspect-square bg-slate-700/50 rounded-full mb-4 flex items-center justify-center overflow-hidden border-2 border-green-400 mx-auto w-20 h-20">
+                <div className="flex items-center justify-center h-full w-full text-center">
+                  <div className="text-green-400 text-2xl font-bold">{story.clientName.charAt(0)}</div>
                 </div>
               </div>
 

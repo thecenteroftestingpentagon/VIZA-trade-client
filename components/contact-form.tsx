@@ -102,12 +102,8 @@ export default function ContactForm() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Big logo for contact form */}
-              <img
-                src="/assets/icon.png"
-                alt="VIZA TRADE Logo"
-                className="w-full h-full object-contain"
-              />
+            <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Replaced logo with text */}
+              <span className="text-green-400 text-3xl font-bold">VIZA</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Contact <span className="text-green-400">VIZA TRADE</span>

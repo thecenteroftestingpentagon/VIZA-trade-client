@@ -9,8 +9,18 @@ import Footer from "@/components/footer"
 
 export default function WorkInItalyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen pt-20 relative">
+      {/* Country background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-0" 
+        style={{
+          backgroundImage: "url('/country/Italy.jpg')",
+          filter: "brightness(0.3) contrast(1.1)"
+        }}
+      ></div>
+      {/* Overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 z-0"></div>
+      <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Back Button */}
         <Link href="/work" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4" />

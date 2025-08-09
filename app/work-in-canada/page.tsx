@@ -10,8 +10,18 @@ import Footer from "@/components/footer"
 export default function WorkInCanadaPage() {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-screen pt-20 relative">
+        {/* Country background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{
+            backgroundImage: "url('/country/can.jpeg')",
+            filter: "brightness(0.3) contrast(1.1)"
+          }}
+        ></div>
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 z-0"></div>
+        <div className="container mx-auto px-4 py-8 relative z-10">
           {/* Back Button */}
           <Link href="/work" className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" />
@@ -160,11 +170,11 @@ export default function WorkInCanadaPage() {
                 Ready to Start Your Journey?
               </h3>
               <p className="text-gray-300 mb-6">
-                Get personalized guidance for your Canada work visa application. 
+                Get personalized guidance for your Canada work visa application.
                 Our experts will help you navigate the process smoothly.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
+                <Button
                   className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
                   onClick={() => window.open('https://wa.me/8160050554?text=Hi, I want to know more about working in Canada', '_blank')}
                 >
