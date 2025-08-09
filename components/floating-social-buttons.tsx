@@ -1,6 +1,4 @@
 "use client"
-
-"use client"
 import React, { useState } from "react"
 import { MessageCircle, Instagram, X } from "lucide-react"
 

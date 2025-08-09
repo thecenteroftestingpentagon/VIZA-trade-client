@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Globe, Users, TrendingUp, DollarSign } from "lucide-react"
@@ -68,7 +69,7 @@ export default function StartupVisaPage() {
                       <p className="text-white">{country.timeframe}</p>
                     </div>
                   </div>
-                  <Button 
+                  <Button
                     className="w-full mt-4 bg-green-600 hover:bg-green-700"
                     onClick={() => window.open(`https://wa.me/8160050554?text=Hi! I'm interested in the ${country.name} startup visa program`, '_blank')}
                   >
@@ -144,14 +145,14 @@ export default function StartupVisaPage() {
               Get expert guidance on startup visa programs and turn your business dreams into reality. Our team will help you choose the right country and navigate the entire process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 size="lg"
                 className="bg-green-600 hover:bg-green-700"
                 onClick={() => window.open('https://wa.me/8160050554?text=Hi! I want to apply for a startup visa and need guidance', '_blank')}
               >
                 💬 Get Free Consultation
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black"

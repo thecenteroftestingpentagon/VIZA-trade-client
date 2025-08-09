@@ -142,17 +142,14 @@ export default function ServicesSection() {
   )
 }
 
-function ServiceCard({
-  icon: Icon,
-  title,
-  description,
-  features,
-}: {
-  icon: any
-  title: string
-  description: string
-  features: string[]
-}) {
+interface ServiceCardProps {
+  icon: any;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+function ServiceCard({ icon: Icon, title, description, features }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

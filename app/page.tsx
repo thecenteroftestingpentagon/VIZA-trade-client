@@ -1,5 +1,7 @@
 "use client"
 
+export const dynamic = 'force-dynamic'
+
 import { useState, useEffect } from "react"
 import LoadingScreen from "@/components/loading-screen"
 import Header from "@/components/header"

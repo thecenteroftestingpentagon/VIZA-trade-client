@@ -1,47 +1,48 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Building, Users, Globe, TrendingUp } from "lucide-react"
 
 export default function BusinessVisaPage() {
   const countries = [
-    { 
-      name: "United Kingdom", 
-      visaType: "Innovator Founder Visa", 
+    {
+      name: "United Kingdom",
+      visaType: "Innovator Founder Visa",
       investment: "£50,000+",
       duration: "3 years",
       processing: "8-12 weeks"
     },
-    { 
-      name: "Australia", 
-      visaType: "Business Innovation Visa", 
+    {
+      name: "Australia",
+      visaType: "Business Innovation Visa",
       investment: "AUD 500,000+",
       duration: "4 years",
       processing: "10-12 months"
     },
-    { 
-      name: "Canada", 
-      visaType: "Self-Employed Visa", 
+    {
+      name: "Canada",
+      visaType: "Self-Employed Visa",
       investment: "CAD 300,000+",
       duration: "Permanent",
       processing: "12-18 months"
     },
-    { 
-      name: "Germany", 
-      visaType: "Entrepreneur Visa", 
+    {
+      name: "Germany",
+      visaType: "Entrepreneur Visa",
       investment: "€25,000+",
       duration: "3 years",
       processing: "6-8 weeks"
     },
-    { 
-      name: "Netherlands", 
-      visaType: "Startup Visa", 
+    {
+      name: "Netherlands",
+      visaType: "Startup Visa",
       investment: "€4,500+",
       duration: "1 year",
       processing: "8-12 weeks"
     },
-    { 
-      name: "Singapore", 
-      visaType: "EntrePass", 
+    {
+      name: "Singapore",
+      visaType: "EntrePass",
       investment: "SGD 50,000+",
       duration: "2 years",
       processing: "4-6 weeks"
@@ -113,7 +114,7 @@ export default function BusinessVisaPage() {
                       <span className="text-white ml-2">{country.processing}</span>
                     </div>
                   </div>
-                  <Button 
+                  <Button
                     className="w-full mt-4 bg-green-600 hover:bg-green-700 text-sm"
                     onClick={() => window.open(`https://wa.me/8160050554?text=Hi! I'm interested in the ${country.name} business visa`, '_blank')}
                   >
@@ -215,14 +216,14 @@ export default function BusinessVisaPage() {
               Take your business international with our expert business visa guidance. We'll help you choose the right country, prepare your application, and establish your business successfully.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 size="lg"
                 className="bg-green-600 hover:bg-green-700"
                 onClick={() => window.open('https://wa.me/8160050554?text=Hi! I want to apply for a business visa and expand my business internationally', '_blank')}
               >
                 💬 Start Your Business Journey
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black"

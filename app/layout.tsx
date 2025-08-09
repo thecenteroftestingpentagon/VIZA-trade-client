@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import FloatingSocialButtons from '@/components/floating-social-buttons'
+import ClientWrapper from '@/components/client-wrapper'
 
 export const metadata: Metadata = {
   title: 'VIZA TRADE - Global Trade Simplified Visas',
@@ -21,7 +21,7 @@ export default function RootLayout({
       <head />
       <body>
         {children}
-        <FloatingSocialButtons />
+        <ClientWrapper />
       </body>
     </html>
   )
