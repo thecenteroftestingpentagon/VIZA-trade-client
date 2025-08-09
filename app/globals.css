@@ -128,3 +128,13 @@ body {
     box-shadow: 0 4px 25px rgba(37, 211, 102, 0.7);
   }
 }
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
