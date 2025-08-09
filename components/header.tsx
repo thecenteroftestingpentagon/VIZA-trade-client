@@ -65,10 +65,8 @@ export default function Header() {
           <Button
             className="bg-orange-500 hover:bg-orange-600 text-white"
             onClick={() => {
-              const element = document.getElementById('consultation-form');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
+              // Navigate directly to the consultation page
+              window.location.href = '/consultation';
             }}
           >
             BOOK FREE CONSULTATION

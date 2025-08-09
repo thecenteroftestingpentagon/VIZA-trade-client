@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, MessageSquare, Calendar, DollarSign, Users, FileText, Phone, Mail, Clock, Headphones } from "lucide-react"
 import Link from "next/link"
+import ConsultationForm from "@/components/consultation-form"
 
 export default function ConsultationPage() {
   return (
@@ -28,7 +29,7 @@ export default function ConsultationPage() {
             </div>
           </div>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Get personalized immigration advice from our experienced consultants. 
+            Get personalized immigration advice from our experienced consultants.
             We provide comprehensive guidance for all your immigration and visa needs.
           </p>
         </div>
@@ -296,11 +297,11 @@ export default function ConsultationPage() {
               Ready to Get Expert Advice?
             </h3>
             <p className="text-gray-300 mb-6">
-              Schedule your consultation today and get personalized guidance for your immigration journey. 
+              Schedule your consultation today and get personalized guidance for your immigration journey.
               Our experts are here to help you make informed decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
                 onClick={() => window.open('https://wa.me/8160050554?text=Hi, I would like to schedule a consultation', '_blank')}
               >
@@ -310,12 +311,28 @@ export default function ConsultationPage() {
               <Link href="/contact">
                 <Button variant="outline" className="border-green-400 text-green-400 hover:bg-green-400/10 px-8 py-3">
                   <Mail className="w-4 h-4 mr-2" />
-                  Schedule Consultation
+                  Contact Us
                 </Button>
               </Link>
             </div>
           </CardContent>
         </Card>
+
+        {/* Consultation Form Section */}
+        <div className="mt-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white">
+              Book Your <span className="text-green-400">Free Consultation</span> Now
+            </h2>
+            <p className="text-gray-300 mt-2">
+              Fill out the form below and our experts will get back to you within 24 hours.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <ConsultationForm />
+          </div>
+        </div>
       </div>
     </div>
   )
