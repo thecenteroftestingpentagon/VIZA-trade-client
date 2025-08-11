@@ -13,9 +13,6 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-20 h-20 flex items-center justify-center"> {/* Replaced image with text logo */}
-                <span className="text-green-400 text-2xl font-bold">VIZA</span>
-              </div>
               <div>
                 <h3 className="text-xl font-bold">
                   <span className="text-green-400">VIZA</span> TRADE
@@ -143,7 +140,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-teal-800/30 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Viza Trade. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} VIZA TRADE. All rights reserved.</p>
         </div>
       </div>
     </footer>
