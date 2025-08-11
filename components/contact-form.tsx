@@ -329,10 +329,7 @@ export default function ContactForm() {
                   <Button
                     className="w-full bg-orange-600 hover:bg-orange-700"
                     onClick={() => {
-                      const element = document.getElementById('consultation-form');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
+                      window.location.href = '/consultation';
                     }}
                   >
                     🤝 B2B Consultation
