@@ -24,20 +24,20 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2 md:gap-3">
-            <div className="w-16 h-16 md:w-28 md:h-28 flex items-center justify-center">
+            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
               <Image
                 src="/assets/viza1.png"
                 alt="VIZA TRADE Logo"
-                width={64}
-                height={64}
-                className="object-contain md:w-28 md:h-28"
+                width={48}
+                height={48}
+                className="object-contain w-full h-full"
               />
             </div>
-            <div>
-              <h1 className="text-xl md:text-3xl font-bold">
+            <div className="flex-1">
+              <h1 className="text-lg md:text-2xl font-bold leading-tight">
                 <span className="text-green-400">VIZA</span> TRADE
               </h1>
-              <p className="text-xs md:text-base text-gray-300">Global Trade Simplified Visas</p>
+              <p className="text-xs md:text-sm text-gray-300 hidden sm:block">Global Trade Simplified Visas</p>
             </div>
           </div>
 
@@ -71,62 +71,81 @@ export default function Header() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <Button
-            className="bg-orange-500 hover:bg-orange-600 text-white"
-            onClick={() => {
-              // Navigate directly to the consultation page
-              window.location.href = '/consultation';
-            }}
-          >
-            BOOK FREE CONSULTATION
-          </Button>
+          {/* Mobile CTA Button and Menu */}
+          <div className="flex items-center gap-2">
+            <Button
+              className="bg-orange-500 hover:bg-orange-600 text-white text-xs md:text-sm px-3 py-2 md:px-4 md:py-2"
+              onClick={() => {
+                window.location.href = '/consultation';
+              }}
+            >
+              BOOK FREE CONSULTATION
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden text-white hover:bg-teal-700/50 transition-colors duration-200 p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="bg-teal-800/50 backdrop-blur-md py-2 px-4 border-b border-teal-700/30">
-        <div className="max-w-7xl mx-auto flex items-center">
-          <div className="hidden md:flex items-center space-x-1">
-            <NavItem href="/" active>
-              Home
-            </NavItem>
-            <NavItem href="/about">About Us</NavItem>
-            <VisaDropdown />
-            <WorkDropdown />
-            <ImmigrationDropdown />
-            <ServicesDropdown />
-            <NavItem href="/contact">Contact Us</NavItem>
-          </div>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:bg-teal-700/50 transition-colors duration-200"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
+      {/* Navigation - Desktop only */}
+      <nav className="hidden md:block bg-teal-800/50 backdrop-blur-md py-2 px-4 border-b border-teal-700/30">
+        <div className="max-w-7xl mx-auto flex items-center space-x-1">
+          <NavItem href="/" active>Home</NavItem>
+          <NavItem href="/about">About Us</NavItem>
+          <VisaDropdown />
+          <WorkDropdown />
+          <ImmigrationDropdown />
+          <ServicesDropdown />
+          <NavItem href="/contact">Contact Us</NavItem>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700/50 shadow-lg">
-          <div className="container mx-auto px-4 py-6 space-y-3">
+          <div className="px-4 py-4 space-y-1">
+            {/* Home */}
+            <Link
+              href="/"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <div className="flex items-center gap-3">
+                <span>🏠</span>
+                Home
+              </div>
+            </Link>
+
+            {/* About */}
+            <Link
+              href="/about"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <div className="flex items-center gap-3">
+                <span>ℹ️</span>
+                About Us
+              </div>
+            </Link>
+
             {/* Visa Services */}
-            <div className="border-b border-teal-700/30 pb-3">
-              <Link
-                href="/visa"
-                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <div className="flex items-center gap-2">
-                  <Globe className="w-4 h-4" />
-                  Visa Services
-                </div>
-              </Link>
-            </div>
+            <Link
+              href="/visa"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <div className="flex items-center gap-3">
+                <Globe className="w-4 h-4" />
+                Visa Services
+              </div>
+            </Link>
 
             {/* Work Opportunities */}
             <div className="border-b border-teal-700/30 pb-3">
