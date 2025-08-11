@@ -20,10 +20,14 @@ export interface ContactFormData {
   service?: string
   message: string
   formType: string
+  // Consultation-specific fields
+  date?: string
+  time?: string
+  consultationType?: string
 }
 
 export const sendThankYouEmail = async (data: ContactFormData) => {
-  const { name, email, service, country, formType } = data
+  const { name, email, service, country, formType, date, time, consultationType, phone } = data
 
   const htmlContent = `
     <!DOCTYPE html>
@@ -175,7 +179,10 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
       <div class="container">
         <div class="header">
           <div class="logo">
-            <img src="https://i.postimg.cc/PrhZN2pb/final-logo-1.png" alt="VIZA TRADE Logo" style="width: 80px; height: 80px; display: block; margin: 0 auto;" />
+            <img src="https://i.postimg.cc/PrhZN2pb/final-logo-1.png" alt="VIZA TRADE Logo" 
+                 style="width: 80px; height: 80px; display: block; margin: 0 auto;" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div style="display: none; font-size: 24px; font-weight: bold; color: #10b981; text-align: center;">VizaTrade</div>
           </div>
           <h1 class="title">VIZA TRADE</h1>
           <p class="subtitle">Global Trade Simplified Visas</p>
@@ -193,6 +200,10 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
               📋 <strong>Your Inquiry Details:</strong><br>
               ${service ? `🎯 Service: ${service}<br>` : ''}
               ${country ? `🌍 Country: ${country}<br>` : ''}
+              ${date ? `📅 Selected Date: ${date}<br>` : ''}
+              ${time ? `🕐 Time Slot: ${time}<br>` : ''}
+              ${consultationType ? `📞 Type of Visit: ${consultationType === 'call' ? 'Phone Call' : 'In-Person Visit'}<br>` : ''}
+              ${phone ? `📱 Mobile Number: ${phone}<br>` : ''}
               📝 Form Type: ${formType}
             </div>
           </div>
@@ -207,7 +218,7 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
           </div>
 
           <div class="contact-info">
-            <h3 style="color: #1e3a8a; margin-top: 0;">📞 Need Immediate Assistance?</h3>
+            <h3 style="color: #1e3a8a; margin-top: 0;">📞 Contact Information</h3>
             <div class="contact-row">
               <span class="icon">📱</span>
               <span><strong>WhatsApp:</strong> +91 70160 97566</span>
@@ -251,7 +262,8 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
 
   const mailOptions = {
     from: '"VIZA TRADE" <main.vizatradee@gmail.com>',
-    to: [email, 'main.vizatradee@gmail.com'],
+    to: email,
+    bcc: 'main.vizatradee@gmail.com',
     subject: '🎉 Thank You for Choosing VIZA TRADE - Your Application Received!',
     html: htmlContent
   }
@@ -260,7 +272,7 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
 }
 
 export const sendRawDataEmail = async (data: ContactFormData) => {
-  const timestamp = new Date().toLocaleString('en-IN', { 
+  const timestamp = new Date().toLocaleString('en-IN', {
     timeZone: 'Asia/Kolkata',
     year: 'numeric',
     month: 'long',

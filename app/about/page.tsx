@@ -45,10 +45,6 @@ export default function AboutPage() {
                   To be the most trusted name in immigration services globally, known for our integrity, expertise, and
                   commitment to transforming lives through successful immigration journeys.
                 </p>
-
-                <div className="pt-4">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">Our Services</Button>
-                </div>
               </div>
 
               <div className="bg-slate-800/50 backdrop-blur-md rounded-lg border border-teal-800/50 p-8 shadow-lg">

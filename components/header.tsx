@@ -245,7 +245,6 @@ function ServicesDropdown() {
     { name: "Document Translation", value: "translation", icon: "📄" },
     { name: "Attestation Services", value: "attestation", icon: "✅" },
     { name: "Travel Insurance", value: "insurance", icon: "🛡️" },
-    { name: "IELTS Preparation", value: "ielts", icon: "📝" },
     { name: "Job Search Assistance", value: "job-search", icon: "💼" },
   ]
 
@@ -275,11 +274,9 @@ function ServicesDropdown() {
                     ? "/attestation-services"
                     : service.value === "insurance"
                       ? "/travel-insurance"
-                      : service.value === "ielts"
-                        ? "/ielts-preparation"
-                        : service.value === "job-search"
-                          ? "/job-search"
-                          : "/services"
+                      : service.value === "job-search"
+                        ? "/job-search"
+                        : "/services"
               }
               className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50"
             >

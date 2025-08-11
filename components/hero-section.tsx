@@ -82,7 +82,7 @@ export default function HeroSection() {
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => window.open('https://wa.me/8160050554?text=Hi! I want to start my visa journey with VIZA TRADE', '_blank')}
             >
-              🚀 Start Your Journey
+              � Chat on WhatsApp
             </Button>
             <Button
               size="lg"

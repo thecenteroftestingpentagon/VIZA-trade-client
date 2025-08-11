@@ -123,12 +123,6 @@ export default function ServicesSection() {
                 features={["University selection", "Application preparation", "Scholarship guidance"]}
               />
               <ServiceCard
-                icon={Award}
-                title="Language Programs"
-                description="Improve your language skills with our specialized language program placements."
-                features={["School selection", "Application assistance", "Accommodation arrangements"]}
-              />
-              <ServiceCard
                 icon={Globe}
                 title="Post-Study Work"
                 description="Transition from study to work with our post-graduation work permit services."
@@ -174,7 +168,12 @@ function ServiceCard({ icon: Icon, title, description, features }: ServiceCardPr
         ))}
       </ul>
 
-      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">Learn More</Button>
+      <Button
+        className="w-full bg-orange-500 hover:bg-orange-600 text-white"
+        onClick={() => window.location.href = '/#consultation-form'}
+      >
+        Learn More
+      </Button>
     </motion.div>
   )
 }

@@ -303,10 +303,27 @@ export default function ContactForm() {
                     We respond to all inquiries within 2 hours during business hours!
                   </p>
                   <Button
-                    className="w-full bg-green-600 hover:bg-green-700"
+                    className="w-full bg-green-600 hover:bg-green-700 mb-3"
                     onClick={() => window.open('https://wa.me/8160050554?text=Hi! I need assistance with visa services.', '_blank')}
                   >
                     💬 WhatsApp Us Now
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-to-r from-orange-600/20 to-purple-600/20 backdrop-blur-sm border-orange-400/30">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    B2B Partnership
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    Looking for business partnerships or corporate visa services? Connect with our business team.
+                  </p>
+                  <Button
+                    className="w-full bg-orange-600 hover:bg-orange-700"
+                    onClick={() => window.location.href = '/#consultation-form'}
+                  >
+                    🤝 B2B Consultation
                   </Button>
                 </CardContent>
               </Card>

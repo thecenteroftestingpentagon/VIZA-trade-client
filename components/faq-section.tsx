@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function FaqSection() {
-  const [openItem, setOpenItem] = useState<string | null>("item-1")
+  const [openItem, setOpenItem] = useState<string | undefined>("item-1")
 
   const faqs = [
     {

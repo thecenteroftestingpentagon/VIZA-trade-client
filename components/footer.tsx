@@ -138,44 +138,12 @@ export default function Footer() {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
-
-              <div className="flex space-x-4">
-                {[
-                  { name: "facebook", url: "https://www.facebook.com/vizatrade" },
-                  { name: "twitter", url: "https://twitter.com/vizatrade" },
-                  { name: "instagram", url: "https://www.instagram.com/viza.trade27" },
-                  { name: "linkedin", url: "https://www.linkedin.com/company/vizatrade" }
-                ].map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-green-500 transition-colors duration-300"
-                  >
-                    <span className="sr-only">{social.name}</span>
-                    <div className="w-4 h-4 text-white flex items-center justify-center">{social.name.charAt(0).toUpperCase()}</div>
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-teal-800/30 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Viza Trade. All rights reserved.</p>
-
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="text-gray-400 hover:text-green-400 text-sm">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="text-gray-400 hover:text-green-400 text-sm">
-              Terms of Service
-            </Link>
-            <Link href="/sitemap.xml" className="text-gray-400 hover:text-green-400 text-sm">
-              Sitemap
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

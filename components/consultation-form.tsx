@@ -134,7 +134,10 @@ Please confirm my consultation booking and provide further details.`
           service: getServiceName(formData.service),
           country: formData.countries.join(', '),
           message: consultationMessage,
-          formType: 'Consultation Booking'
+          formType: 'Consultation Booking',
+          date: formData.date ? format(formData.date, 'PPP') : '',
+          time: timeSlots.find(slot => slot.value === formData.time)?.label || formData.time,
+          consultationType: formData.consultationType
         }),
       })
 
@@ -285,6 +288,12 @@ Please confirm my consultation booking and provide further details.`
                 disabled={(date) => date < new Date()}
                 initialFocus
                 className="bg-slate-800 text-white"
+                modifiers={{
+                  today: new Date()
+                }}
+                modifiersClassNames={{
+                  today: "bg-green-500/50 text-white font-bold border-2 border-green-400"
+                }}
               />
             </PopoverContent>
           </Popover>
