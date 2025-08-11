@@ -20,24 +20,24 @@ export default function Header() {
       </div>
 
       {/* Main header */}
-      <div className="bg-teal-900/70 backdrop-blur-md py-3 px-4 border-b border-teal-800/50">
+      <div className="bg-teal-900/70 backdrop-blur-md py-2 md:py-3 px-3 md:px-4 border-b border-teal-800/50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-28 h-28 flex items-center justify-center">
+          <div className="flex items-center gap-2 md:gap-3">
+            <div className="w-16 h-16 md:w-28 md:h-28 flex items-center justify-center">
               <Image
                 src="/assets/viza1.png"
                 alt="VIZA TRADE Logo"
-                width={112}
-                height={112}
-                className="object-contain"
+                width={64}
+                height={64}
+                className="object-contain md:w-28 md:h-28"
               />
             </div>
             <div>
-              <h1 className="text-3xl font-bold">
+              <h1 className="text-xl md:text-3xl font-bold">
                 <span className="text-green-400">VIZA</span> TRADE
               </h1>
-              <p className="text-base text-gray-300">Global Trade Simplified Visas</p>
+              <p className="text-xs md:text-base text-gray-300">Global Trade Simplified Visas</p>
             </div>
           </div>
 
@@ -102,7 +102,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-white hover:bg-teal-700/50 transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <Menu className="h-6 w-6" />
@@ -112,42 +112,74 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700/50">
-          <div className="container mx-auto px-4 py-4 space-y-2">
-            <Link
-              href="/visa"
-              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Visa Services
-            </Link>
-            <Link
-              href="/work"
-              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Work Opportunities
-            </Link>
-            <Link
-              href="/immigration"
-              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Immigration Services
-            </Link>
-            <Link
-              href="/services"
-              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Other Services
-            </Link>
+        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700/50 shadow-lg">
+          <div className="container mx-auto px-4 py-6 space-y-3">
+            {/* Visa Services */}
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/visa"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Visa Services
+                </div>
+              </Link>
+            </div>
+
+            {/* Work Opportunities */}
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/work"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Work Opportunities
+                </div>
+              </Link>
+            </div>
+
+            {/* Immigration Services */}
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/immigration"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Immigration Services
+                </div>
+              </Link>
+            </div>
+
+            {/* Other Services */}
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/services"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Other Services
+                </div>
+              </Link>
+            </div>
+
+            {/* Contact Us */}
             <Link
               href="/contact"
-              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact Us
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                Contact Us
+              </div>
             </Link>
           </div>
         </div>
