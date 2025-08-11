@@ -197,8 +197,7 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
       <div class="container">
         <div class="header">
           <div class="logo">
-            <img src="https://i.postimg.cc/your-mail-image/mail.jpg" alt="Mail Icon" 
-                 style="width: 60px; height: 60px; display: block; margin: 0 auto;" />
+            <img src="https://vizatrade.com/assets/viza1.png" alt="VIZA TRADE Logo" style="width: 60px; height: 60px; display: block; margin: 0 auto; border-radius: 10px; background: #fff; object-fit: contain;" />
           </div>
           <h1 class="title">VIZA TRADE</h1>
           <p class="subtitle">Global Trade Simplified Visas</p>
@@ -421,7 +420,7 @@ export const sendRawDataEmail = async (data: ContactFormData) => {
     <body>
       <div class="container">
         <div class="header">
-          <img src="https://i.postimg.cc/your-mail-image/mail.jpg" alt="Mail Icon" style="width: 60px; height: 60px; margin: 0 auto 15px; display: block;" />
+    <img src="https://vizatrade.com/assets/viza1.png" alt="VIZA TRADE Logo" style="width: 60px; height: 60px; margin: 0 auto 15px; display: block; border-radius: 10px; background: #fff; object-fit: contain;" />
           <h1>🚨 NEW FORM SUBMISSION</h1>
           <p>VIZA TRADE - Admin Dashboard</p>
         </div>
