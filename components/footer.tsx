@@ -117,26 +117,6 @@ export default function Footer() {
               )}
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-bold text-white mb-6">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest visa and immigration updates.
-            </p>
-
-            <div className="space-y-4">
-              <div className="flex">
-                <Input
-                  placeholder="Your email address"
-                  className="bg-slate-800/50 border-teal-700/50 text-white rounded-r-none"
-                />
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-l-none">
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="border-t border-teal-800/30 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">

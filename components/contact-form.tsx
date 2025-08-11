@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import Image from "next/image"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -259,8 +260,14 @@ export default function ContactForm() {
                     onClick={() => window.open('mailto:main.vizatradee@gmail.com', '_self')}
                     className="flex items-center gap-4 w-full text-left hover:bg-white/5 p-2 rounded transition-colors"
                   >
-                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/assets/mail.jpg"
+                        alt="Email"
+                        width={24}
+                        height={24}
+                        className="object-contain"
+                      />
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">Email</h3>

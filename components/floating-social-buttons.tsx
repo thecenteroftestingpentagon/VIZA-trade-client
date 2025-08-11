@@ -18,15 +18,6 @@ export default function FloatingSocialButtons() {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <div className="flex flex-col gap-3">
-        {/* Instagram Button */}
-        <button
-          onClick={handleInstagramClick}
-          className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-          aria-label="Follow on Instagram"
-        >
-          <Instagram className="w-7 h-7" />
-        </button>
-
         {/* WhatsApp Button */}
         <button
           onClick={handleWhatsAppClick}
@@ -40,6 +31,15 @@ export default function FloatingSocialButtons() {
             height={28}
             className="object-contain"
           />
+        </button>
+
+        {/* Instagram Button */}
+        <button
+          onClick={handleInstagramClick}
+          className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          aria-label="Follow on Instagram"
+        >
+          <Instagram className="w-7 h-7" />
         </button>
       </div>
     </div>
