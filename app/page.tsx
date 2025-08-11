@@ -4,7 +4,6 @@ export const dynamic = 'force-dynamic'
 
 import { useState, useEffect } from "react"
 import LoadingScreen from "@/components/loading-screen"
-import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import ParticlesBackground from "@/components/ParticlesBackground"
 import GlowEffect from "@/components/GlowEffect"
@@ -42,7 +41,6 @@ export default function Home() {
       {/* Mouse glow effect */}
       <GlowEffect />
       {/* Page content */}
-      <Header />
       <HeroSection />
       <ServicesSection />
       <StatsSection />

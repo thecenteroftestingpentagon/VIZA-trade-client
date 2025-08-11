@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
-import { MessageCircle, Instagram } from "lucide-react"
+import { Instagram } from "lucide-react"
+import Image from "next/image"
 
 export default function FloatingSocialButtons() {
   const handleWhatsAppClick = () => {
@@ -29,10 +30,16 @@ export default function FloatingSocialButtons() {
         {/* WhatsApp Button */}
         <button
           onClick={handleWhatsAppClick}
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 p-2"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="w-7 h-7" />
+          <Image
+            src="/assets/wp.webp"
+            alt="WhatsApp"
+            width={28}
+            height={28}
+            className="object-contain"
+          />
         </button>
       </div>
     </div>

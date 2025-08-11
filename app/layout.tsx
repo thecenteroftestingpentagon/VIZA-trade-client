@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import '../styles/globals.css'
 import ClientWrapper from '@/components/client-wrapper'
 import { ThemeProvider } from '@/components/theme-provider'
+import Header from '@/components/header'
 
 export const metadata: Metadata = {
   title: 'VIZA TRADE - Global Trade Simplified Visas',
@@ -27,6 +28,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
           <ClientWrapper />
         </ThemeProvider>
