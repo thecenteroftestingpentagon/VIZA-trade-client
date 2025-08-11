@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 
 export default function ContactForm() {
@@ -102,8 +103,14 @@ export default function ContactForm() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Replaced logo with text */}
-              <span className="text-green-400 text-3xl font-bold">VIZA</span>
+            <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <Image
+                src="/assets/viza1.png"
+                alt="VIZA TRADE Logo"
+                width={80}
+                height={80}
+                className="object-contain"
+              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Contact <span className="text-green-400">VIZA TRADE</span>

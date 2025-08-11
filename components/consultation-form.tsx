@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import Image from "next/image"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
@@ -190,8 +191,14 @@ Please confirm my consultation booking and provide further details.`
 
   return (
     <div id="consultation-form" className="bg-slate-800/50 backdrop-blur-md rounded-lg border border-teal-800/50 p-6 shadow-lg">
-      <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4"> {/* Replaced logo with text */}
-        <span className="text-green-400 text-2xl font-bold">VIZA</span>
+      <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4">
+        <Image
+          src="/assets/viza1.png"
+          alt="VIZA TRADE Logo"
+          width={80}
+          height={80}
+          className="object-contain"
+        />
       </div>
 
       <div className="flex items-center justify-center mb-6">

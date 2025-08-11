@@ -1,11 +1,15 @@
 "use client"
 import type React from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
 import { ChevronDown, Globe, Menu, Instagram, Phone, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <header className="relative z-10">
       {/* Top bar - removed countries */}
@@ -20,14 +24,20 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-28 h-28 flex items-center justify-center"> {/* Replaced image with text logo */}
-              <span className="text-green-400 text-2xl font-bold">VIZA</span>
+            <div className="w-28 h-28 flex items-center justify-center">
+              <Image
+                src="/assets/viza1.png"
+                alt="VIZA TRADE Logo"
+                width={112}
+                height={112}
+                className="object-contain"
+              />
             </div>
             <div>
-              <h1 className="text-3xl font-bold"> {/* Even bigger font size */}
+              <h1 className="text-3xl font-bold">
                 <span className="text-green-400">VIZA</span> TRADE
               </h1>
-              <p className="text-base text-gray-300">Global Trade Simplified Visas</p> {/* Even bigger font size */}
+              <p className="text-base text-gray-300">Global Trade Simplified Visas</p>
             </div>
           </div>
 
@@ -89,11 +99,59 @@ export default function Header() {
             <NavItem href="/contact">Contact Us</NavItem>
           </div>
 
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             <Menu className="h-6 w-6" />
           </Button>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700/50">
+          <div className="container mx-auto px-4 py-4 space-y-2">
+            <Link
+              href="/visa"
+              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Visa Services
+            </Link>
+            <Link
+              href="/work"
+              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Work Opportunities
+            </Link>
+            <Link
+              href="/immigration"
+              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Immigration Services
+            </Link>
+            <Link
+              href="/services"
+              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Other Services
+            </Link>
+            <Link
+              href="/contact"
+              className="block py-2 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   )
 }
@@ -116,7 +174,7 @@ function VisaDropdown() {
           <ChevronDown className="ml-1 h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-teal-800/95 backdrop-blur-md border-teal-700/50">
+      <DropdownMenuContent className="w-56 bg-teal-800 backdrop-blur-md border-teal-700/50">
         <DropdownMenuItem asChild>
           <Link href="/visa" className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
             <Globe className="w-4 h-4" />
@@ -166,7 +224,7 @@ function WorkDropdown() {
           <ChevronDown className="ml-1 h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-teal-800/95 backdrop-blur-md border-teal-700/50">
+      <DropdownMenuContent className="w-56 bg-teal-800 backdrop-blur-md border-teal-700/50">
         <DropdownMenuItem asChild>
           <Link href="/work" className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
             <Globe className="w-4 h-4" />
@@ -204,7 +262,7 @@ function ImmigrationDropdown() {
           <ChevronDown className="ml-1 h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-teal-800/95 backdrop-blur-md border-teal-700/50">
+      <DropdownMenuContent className="w-56 bg-teal-800 backdrop-blur-md border-teal-700/50">
         <DropdownMenuItem asChild>
           <Link href="/immigration" className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
             <Globe className="w-4 h-4" />
@@ -256,7 +314,7 @@ function ServicesDropdown() {
           <ChevronDown className="ml-1 h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-teal-800/95 backdrop-blur-md border-teal-700/50">
+      <DropdownMenuContent className="w-56 bg-teal-800 backdrop-blur-md border-teal-700/50">
         <DropdownMenuItem asChild>
           <Link href="/services" className="flex items-center gap-2 text-gray-200 hover:text-white hover:bg-teal-700/50">
             <Globe className="w-4 h-4" />
