@@ -1,6 +1,5 @@
 "use client"
 
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Plane, BookOpen, FileCheck, Clock, CheckCircle } from "lucide-react"
@@ -10,9 +9,7 @@ import Link from "next/link"
 
 export default function VisaPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-700 via-green-900 to-teal-900 text-white">
-      <Header />
-      <main className="relative">
+    <div className="min-h-screen bg-gradient-to-br from-green-700 via-green-900 to-teal-900 text-white">      <main className="relative">
         <BackgroundParticles />
         {/* Hero Section */}
         <section className="relative z-10 py-10 px-2 md:py-20 md:px-4">

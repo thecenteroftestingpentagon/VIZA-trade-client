@@ -1,12 +1,9 @@
 "use client"
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 
 export default function ImmigrationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">
-      <Header />
-      <main className="flex flex-col items-center justify-center py-20 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">      <main className="flex flex-col items-center justify-center py-20 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="text-orange-500">Immigration</span> Services
         </h1>

@@ -1,7 +1,6 @@
 "use client"
 
 import { useParams } from "next/navigation"
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Home, ArrowRight } from "lucide-react"
@@ -59,7 +58,6 @@ export default function VisaTypePage() {
 
     return (
         <div className="min-h-screen bg-[#0a192f] text-white">
-            <Header />
             <main className="max-w-7xl mx-auto px-4 py-12">
                 {/* Navigation */}
                 <div className="flex justify-between items-center mb-12">

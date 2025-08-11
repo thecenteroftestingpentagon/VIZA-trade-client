@@ -1,6 +1,5 @@
 "use client"
 
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -10,9 +9,7 @@ import Link from "next/link"
 
 export default function PermanentResidencyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">
-      <Header />
-      <main className="flex flex-col items-center justify-center py-20 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">      <main className="flex flex-col items-center justify-center py-20 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 flex items-center gap-2">
           <Home className="w-8 h-8 text-green-400" /> Permanent Residency (PR)
         </h1>

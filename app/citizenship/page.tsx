@@ -1,6 +1,5 @@
 "use client"
 
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -11,7 +10,6 @@ import Link from "next/link"
 export default function CitizenshipPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">
-      <Header />
       <main className="flex flex-col items-center justify-center py-20 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 flex items-center gap-2">
           <FileText className="w-8 h-8 text-green-400" /> Citizenship
@@ -51,7 +49,7 @@ export default function CitizenshipPage() {
             </div>
           </div>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Achieve full citizenship and enjoy all the rights and privileges of your new country. 
+            Achieve full citizenship and enjoy all the rights and privileges of your new country.
             We guide you through the naturalization process and citizenship requirements.
           </p>
         </div>
@@ -272,11 +270,11 @@ export default function CitizenshipPage() {
               Ready to Become a Citizen?
             </h3>
             <p className="text-gray-300 mb-6">
-              Get expert guidance on your citizenship application. 
+              Get expert guidance on your citizenship application.
               Our immigration specialists will help you navigate the path to full citizenship.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
                 onClick={() => window.open('https://wa.me/8160050554?text=Hi, I need help with a citizenship application', '_blank')}
               >

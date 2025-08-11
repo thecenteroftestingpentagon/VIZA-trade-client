@@ -1,6 +1,5 @@
 "use client"
 
-import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Award, CheckCircle, Users, Building, Target } from "lucide-react"
@@ -8,9 +7,7 @@ import BackgroundParticles from "@/components/background-particles"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">
-      <Header />
-      <main className="relative">
+    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-slate-800 to-teal-900 text-white">      <main className="relative">
         <BackgroundParticles />
 
         {/* Hero Section */}
