@@ -321,7 +321,12 @@ export default function ContactForm() {
                   </p>
                   <Button
                     className="w-full bg-orange-600 hover:bg-orange-700"
-                    onClick={() => window.location.href = '/#consultation-form'}
+                    onClick={() => {
+                      const element = document.getElementById('consultation-form');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     🤝 B2B Consultation
                   </Button>

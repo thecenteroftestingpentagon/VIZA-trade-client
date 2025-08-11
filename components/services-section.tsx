@@ -52,18 +52,21 @@ export default function ServicesSection() {
                 title="Tourist Visa"
                 description="Visit foreign countries for leisure, family visits, or medical treatment with our tourist visa services."
                 features={["Fast processing", "Document assistance", "Visa interview preparation"]}
+                link="/visa/tourist"
               />
               <ServiceCard
                 icon={BookOpen}
                 title="Student Visa"
                 description="Pursue education abroad with our comprehensive student visa services for global universities."
                 features={["University applications", "Financial documentation", "Pre-departure guidance"]}
+                link="/student-visa"
               />
               <ServiceCard
                 icon={FileCheck}
                 title="Business Visa"
                 description="Expand your business globally with our specialized business visa services for entrepreneurs."
                 features={["Business plan preparation", "Market entry strategy", "Business networking"]}
+                link="/business-visa"
               />
             </>
           )}
@@ -75,18 +78,21 @@ export default function ServicesSection() {
                 title="Permanent Residency"
                 description="Settle permanently in your dream country with our PR visa services and expert guidance."
                 features={["Points assessment", "Documentation support", "Settlement assistance"]}
+                link="/permanent-residency"
               />
               <ServiceCard
                 icon={Users}
                 title="Family Immigration"
                 description="Reunite with your family members abroad through our family sponsorship programs."
                 features={["Relationship verification", "Sponsorship guidance", "Settlement planning"]}
+                link="/family-sponsorship"
               />
               <ServiceCard
                 icon={Award}
                 title="Citizenship"
                 description="Achieve citizenship in your new home country with our comprehensive citizenship services."
                 features={["Eligibility assessment", "Documentation preparation", "Citizenship test preparation"]}
+                link="/citizenship"
               />
             </>
           )}
@@ -98,18 +104,21 @@ export default function ServicesSection() {
                 title="Skilled Worker Visa"
                 description="Work abroad as a skilled professional with our specialized work visa services."
                 features={["Skills assessment", "Job matching", "Work permit processing"]}
+                link="/work-visa"
               />
               <ServiceCard
                 icon={Award}
                 title="Entrepreneur Visa"
                 description="Start or invest in a business abroad with our entrepreneur visa programs."
                 features={["Business plan development", "Investment guidance", "Market analysis"]}
+                link="/startup-visa"
               />
               <ServiceCard
                 icon={Users}
                 title="Temporary Work Permits"
                 description="Secure short-term work opportunities abroad with our temporary work permit services."
                 features={["Employer verification", "Contract review", "Visa processing"]}
+                link="/work"
               />
             </>
           )}
@@ -121,12 +130,14 @@ export default function ServicesSection() {
                 title="University Admissions"
                 description="Get accepted to top universities worldwide with our comprehensive admissions services."
                 features={["University selection", "Application preparation", "Scholarship guidance"]}
+                link="/student-visa"
               />
               <ServiceCard
                 icon={Globe}
                 title="Post-Study Work"
                 description="Transition from study to work with our post-graduation work permit services."
                 features={["Eligibility assessment", "Application support", "Career guidance"]}
+                link="/work-visa"
               />
             </>
           )}
@@ -141,9 +152,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features: string[];
+  link: string;
 }
 
-function ServiceCard({ icon: Icon, title, description, features }: ServiceCardProps) {
+function ServiceCard({ icon: Icon, title, description, features, link }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -170,7 +182,7 @@ function ServiceCard({ icon: Icon, title, description, features }: ServiceCardPr
 
       <Button
         className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-        onClick={() => window.location.href = '/#consultation-form'}
+        onClick={() => window.location.href = link}
       >
         Learn More
       </Button>
