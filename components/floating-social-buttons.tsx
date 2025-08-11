@@ -16,30 +16,30 @@ export default function FloatingSocialButtons() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <div className="flex flex-col gap-3">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999] pointer-events-none">
+      <div className="flex flex-col gap-3 pointer-events-auto">
         {/* WhatsApp Button */}
         <button
           onClick={handleWhatsAppClick}
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 p-2"
+          className="w-12 h-12 md:w-14 md:h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 border-2 border-white/20 backdrop-blur-sm"
           aria-label="Chat on WhatsApp"
         >
           <Image
             src="/assets/wp.webp"
             alt="WhatsApp"
-            width={28}
-            height={28}
-            className="object-contain"
+            width={24}
+            height={24}
+            className="object-contain md:w-7 md:h-7"
           />
         </button>
 
         {/* Instagram Button */}
         <button
           onClick={handleInstagramClick}
-          className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 border-2 border-white/20 backdrop-blur-sm"
           aria-label="Follow on Instagram"
         >
-          <Instagram className="w-7 h-7" />
+          <Instagram className="w-5 h-5 md:w-7 md:h-7" />
         </button>
       </div>
     </div>
