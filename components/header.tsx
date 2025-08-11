@@ -20,7 +20,7 @@ export default function Header() {
       </div>
 
       {/* Main header */}
-      <div className="bg-teal-900/70 backdrop-blur-md py-3 px-4 border-b border-teal-800/50">
+      <div className="bg-teal-900 backdrop-blur-md py-3 px-4 border-b border-teal-700 shadow-lg">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2 md:gap-3">
@@ -109,12 +109,12 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700/50 shadow-lg">
+        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700 shadow-xl">
           <div className="px-4 py-6 space-y-2">
             {/* Home */}
             <Link
               href="/"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
+              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700 rounded-lg font-medium transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <div className="flex items-center gap-3">
