@@ -178,10 +178,6 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
     <body>
       <div class="container">
         <div class="header">
-          <div class="logo">
-            <img src="https://i.postimg.cc/your-mail-image/mail.jpg" alt="Mail Icon" 
-                 style="width: 60px; height: 60px; display: block; margin: 0 auto;" />
-          </div>
           <h1 class="title">VIZA TRADE</h1>
           <p class="subtitle">Global Trade Simplified Visas</p>
         </div>
@@ -206,14 +202,6 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
             </div>
           </div>
 
-          <div class="next-steps">
-            <h3>🚀 What Happens Next?</h3>
-            <ul>
-              <li><strong>Within 2 hours:</strong> Our consultant will review your details</li>
-              <li><strong>Within 24 hours:</strong> You'll receive a personalized consultation plan</li>
-              <li><strong>Free consultation:</strong> Book a detailed discussion with our visa experts</li>
-            </ul>
-          </div>
 
           <div class="contact-info">
             <h3 style="color: #1e3a8a; margin-top: 0;">📞 Contact Information</h3>
@@ -239,13 +227,6 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
               📧 Email Us
             </a>
           </div>
-        </div>
-
-        <div class="social-links">
-          <a href="#" class="social-link">📘</a>
-          <a href="#" class="social-link">📷</a>
-          <a href="#" class="social-link">🐦</a>
-          <a href="#" class="social-link">💼</a>
         </div>
 
         <div class="footer">
