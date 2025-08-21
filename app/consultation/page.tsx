@@ -17,7 +17,23 @@ export default function ConsultationPage() {
           Back to Home
         </Link>
 
-        {/* Header */}
+        {/* ================== CONSULTATION FORM (TOP) ================== */}
+        <div className="mb-16">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold text-white">
+              Book Your <span className="text-green-400">Free Consultation</span> Now
+            </h2>
+            <p className="text-gray-300 mt-2">
+              Fill out the form below and our experts will get back to you within 24 hours.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <ConsultationForm />
+          </div>
+        </div>
+
+        {/* ================== HEADER INFO ================== */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
             <span className="text-6xl">🗣️</span>
@@ -135,6 +151,7 @@ export default function ConsultationPage() {
           </CardContent>
         </Card>
 
+        {/* Services & Process */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Services */}
           <Card className="bg-white/5 backdrop-blur-sm border-green-400/20">
@@ -147,38 +164,14 @@ export default function ConsultationPage() {
             <CardContent>
               <div className="space-y-4">
                 {[
-                  {
-                    service: "Visa Consultation",
-                    description: "Expert advice on visa types and requirements"
-                  },
-                  {
-                    service: "Immigration Planning",
-                    description: "Strategic planning for your immigration journey"
-                  },
-                  {
-                    service: "Document Review",
-                    description: "Thorough review of your application documents"
-                  },
-                  {
-                    service: "Eligibility Assessment",
-                    description: "Comprehensive evaluation of your eligibility"
-                  },
-                  {
-                    service: "Interview Preparation",
-                    description: "Mock interviews and preparation guidance"
-                  },
-                  {
-                    service: "Case Strategy",
-                    description: "Customized strategy for your specific situation"
-                  },
-                  {
-                    service: "Risk Assessment",
-                    description: "Identify and mitigate potential issues"
-                  },
-                  {
-                    service: "Timeline Planning",
-                    description: "Realistic timeline and milestone planning"
-                  }
+                  { service: "Visa Consultation", description: "Expert advice on visa types and requirements" },
+                  { service: "Immigration Planning", description: "Strategic planning for your immigration journey" },
+                  { service: "Document Review", description: "Thorough review of your application documents" },
+                  { service: "Eligibility Assessment", description: "Comprehensive evaluation of your eligibility" },
+                  { service: "Interview Preparation", description: "Mock interviews and preparation guidance" },
+                  { service: "Case Strategy", description: "Customized strategy for your specific situation" },
+                  { service: "Risk Assessment", description: "Identify and mitigate potential issues" },
+                  { service: "Timeline Planning", description: "Realistic timeline and milestone planning" }
                 ].map((service, index) => (
                   <div key={index} className="border-l-2 border-green-400/30 pl-4">
                     <h4 className="text-white font-semibold mb-1">{service.service}</h4>
@@ -200,31 +193,11 @@ export default function ConsultationPage() {
             <CardContent>
               <div className="space-y-4">
                 {[
-                  {
-                    step: "1",
-                    title: "Book Consultation",
-                    description: "Schedule your consultation through our booking system"
-                  },
-                  {
-                    step: "2",
-                    title: "Prepare Documents",
-                    description: "Gather relevant documents and information"
-                  },
-                  {
-                    step: "3",
-                    title: "Consultation Session",
-                    description: "Meet with our expert consultant (in-person or online)"
-                  },
-                  {
-                    step: "4",
-                    title: "Receive Report",
-                    description: "Get a detailed consultation report with recommendations"
-                  },
-                  {
-                    step: "5",
-                    title: "Follow-up Support",
-                    description: "Ongoing support and guidance as needed"
-                  }
+                  { step: "1", title: "Book Consultation", description: "Schedule your consultation through our booking system" },
+                  { step: "2", title: "Prepare Documents", description: "Gather relevant documents and information" },
+                  { step: "3", title: "Consultation Session", description: "Meet with our expert consultant (in-person or online)" },
+                  { step: "4", title: "Receive Report", description: "Get a detailed consultation report with recommendations" },
+                  { step: "5", title: "Follow-up Support", description: "Ongoing support and guidance as needed" }
                 ].map((step, index) => (
                   <div key={index} className="flex gap-4">
                     <div className="w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center text-green-400 font-bold text-sm">
@@ -252,30 +225,10 @@ export default function ConsultationPage() {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                {
-                  method: "Video Call",
-                  icon: "📹",
-                  description: "Face-to-face consultation via video call",
-                  features: "Screen sharing, Document review, Recording available"
-                },
-                {
-                  method: "Phone Call",
-                  icon: "📞",
-                  description: "Traditional phone consultation",
-                  features: "Convenient, Flexible timing, Follow-up notes"
-                },
-                {
-                  method: "In-Person",
-                  icon: "🏢",
-                  description: "Visit our office for consultation",
-                  features: "Personal interaction, Document handling, Immediate feedback"
-                },
-                {
-                  method: "WhatsApp",
-                  icon: "💬",
-                  description: "Quick consultation via WhatsApp",
-                  features: "Instant messaging, Voice notes, Document sharing"
-                }
+                { method: "Video Call", icon: "📹", description: "Face-to-face consultation via video call", features: "Screen sharing, Document review, Recording available" },
+                { method: "Phone Call", icon: "📞", description: "Traditional phone consultation", features: "Convenient, Flexible timing, Follow-up notes" },
+                { method: "In-Person", icon: "🏢", description: "Visit our office for consultation", features: "Personal interaction, Document handling, Immediate feedback" },
+                { method: "WhatsApp", icon: "💬", description: "Quick consultation via WhatsApp", features: "Instant messaging, Voice notes, Document sharing" }
               ].map((method, index) => (
                 <div key={index} className="bg-white/5 rounded-lg p-4 border border-green-400/10">
                   <div className="flex items-center gap-2 mb-3">
@@ -317,22 +270,6 @@ export default function ConsultationPage() {
             </div>
           </CardContent>
         </Card>
-
-        {/* Consultation Form Section */}
-        <div className="mt-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white">
-              Book Your <span className="text-green-400">Free Consultation</span> Now
-            </h2>
-            <p className="text-gray-300 mt-2">
-              Fill out the form below and our experts will get back to you within 24 hours.
-            </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <ConsultationForm />
-          </div>
-        </div>
       </div>
     </div>
   )
