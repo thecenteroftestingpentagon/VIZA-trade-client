@@ -250,7 +250,7 @@ export default function WorkInSpainPage() {
                   className="border-green-400 text-green-400 hover:bg-green-400/10"
                   asChild
                 >
-                  <Link href="/contact">
+                  <Link href="/consultation">
                     <Mail className="w-5 h-5 mr-2" />
                     Schedule Meeting
                   </Link>
