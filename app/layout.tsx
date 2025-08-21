@@ -19,18 +19,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className="min-h-screen bg-background font-sans antialiased">
+    <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
+      <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <ClientWrapper />
+          <ClientWrapper>
+            <Header />
+            {children}
+          </ClientWrapper>
         </ThemeProvider>
       </body>
     </html>

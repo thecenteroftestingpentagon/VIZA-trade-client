@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-color: #0d1f2d;
+    --card-bg: #162736;
+    --text-color: #ffffff;
+    --subtext-color: #cccccc;
+    --accent-green: #16a34a;
+    --accent-orange: #f97316;
+    --navbar-bg: #123026;
+    --button-bg: #f97316;
+    --button-text: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+
+    color-scheme: dark;
+    /* only dark mode */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
