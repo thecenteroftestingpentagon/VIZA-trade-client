@@ -16,25 +16,13 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
-    country: "",
-    service: "",
     message: ""
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const countries = [
-    "United States", "Canada", "Australia", "United Kingdom", "Germany",
-    "France", "Netherlands", "Singapore", "New Zealand", "UAE",
-    "Qatar", "Saudi Arabia", "Japan", "South Korea", "Italy", "Spain", "Mexico"
-  ]
-
-  const services = [
-    "Work Visa", "Study Visa", "Tourist Visa", "Business Visa",
-    "Family Visa", "Permanent Residency", "Citizenship", "Other"
-  ]
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -76,8 +64,6 @@ export default function ContactForm() {
           name: "",
           email: "",
           phone: "",
-          country: "",
-          service: "",
           message: ""
         })
 
@@ -166,37 +152,6 @@ export default function ContactForm() {
                         placeholder="+1 234 567 8900"
                       />
                     </div>
-                    <div>
-                      <Label className="text-white">Country of Interest</Label>
-                      <Select onValueChange={(value) => handleSelectChange('country', value)}>
-                        <SelectTrigger className="bg-white/10 border-green-400/30 text-white">
-                          <SelectValue placeholder="Select a country" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {countries.map((country) => (
-                            <SelectItem key={country} value={country}>
-                              {country}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label className="text-white">Service Type</Label>
-                    <Select onValueChange={(value) => handleSelectChange('service', value)}>
-                      <SelectTrigger className="bg-white/10 border-green-400/30 text-white">
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {services.map((service) => (
-                          <SelectItem key={service} value={service}>
-                            {service}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
                   </div>
 
                   <div>
@@ -207,7 +162,7 @@ export default function ContactForm() {
                       value={formData.message}
                       onChange={handleChange}
                       className="bg-white/10 border-green-400/30 text-white min-h-[120px]"
-                      placeholder="Tell us about your visa requirements..."
+                      placeholder="Write your message here ..."
                       required
                     />
                   </div>
