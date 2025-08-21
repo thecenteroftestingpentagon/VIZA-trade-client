@@ -67,24 +67,6 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
           height: 100%;
           object-fit: contain;
         }
-        .cover-image {
-          width: 100%;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 10px;
-          margin: 20px 0;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .photo-credit {
-          font-size: 10px;
-          color: rgba(255, 255, 255, 0.7);
-          text-align: center;
-          margin-top: 5px;
-        }
-        .photo-credit a {
-          color: rgba(255, 255, 255, 0.8);
-          text-decoration: none;
-        }
         .title {
           color: #ffffff;
           font-size: 28px;
@@ -197,18 +179,11 @@ export const sendThankYouEmail = async (data: ContactFormData) => {
       <div class="container">
         <div class="header">
           <div class="logo">
-            <img src="https://vizatrade.com/assets/viza1.png" alt="VIZA TRADE Logo" style="width: 60px; height: 60px; display: block; margin: 0 auto; border-radius: 10px; background: #fff; object-fit: contain;" />
+            <img src="https://i.postimg.cc/your-mail-image/mail.jpg" alt="Mail Icon" 
+                 style="width: 60px; height: 60px; display: block; margin: 0 auto;" />
           </div>
           <h1 class="title">VIZA TRADE</h1>
           <p class="subtitle">Global Trade Simplified Visas</p>
-        </div>
-
-        <!-- Cover Image -->
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-             alt="Professional Business Cover" 
-             class="cover-image" />
-        <div class="photo-credit">
-          Photo by <a href="https://unsplash.com/@sensekrete?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">OM CHOKSI</a> on <a href="https://unsplash.com/photos/xZv_3fUCHes?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
 
         <div class="content">
@@ -420,17 +395,9 @@ export const sendRawDataEmail = async (data: ContactFormData) => {
     <body>
       <div class="container">
         <div class="header">
-    <img src="https://vizatrade.com/assets/viza1.png" alt="VIZA TRADE Logo" style="width: 60px; height: 60px; margin: 0 auto 15px; display: block; border-radius: 10px; background: #fff; object-fit: contain;" />
+          <img src="https://i.postimg.cc/your-mail-image/mail.jpg" alt="Mail Icon" style="width: 60px; height: 60px; margin: 0 auto 15px; display: block;" />
           <h1>🚨 NEW FORM SUBMISSION</h1>
           <p>VIZA TRADE - Admin Dashboard</p>
-        </div>
-
-        <!-- Cover Image -->
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-             alt="Professional Business Cover" 
-             class="cover-image" />
-        <div class="photo-credit">
-          Photo by <a href="https://unsplash.com/@sensekrete?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">OM CHOKSI</a> on <a href="https://unsplash.com/photos/xZv_3fUCHes?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
 
         <div class="timestamp">

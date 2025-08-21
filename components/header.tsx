@@ -20,24 +20,24 @@ export default function Header() {
       </div>
 
       {/* Main header */}
-      <div className="bg-teal-900 backdrop-blur-md py-3 px-4 border-b border-teal-700 shadow-lg">
+      <div className="bg-teal-900/70 backdrop-blur-md py-2 md:py-3 px-3 md:px-4 border-b border-teal-800/50">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2 md:gap-3">
-            <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
               <Image
                 src="/assets/viza1.png"
                 alt="VIZA TRADE Logo"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
                 className="object-contain w-full h-full"
               />
             </div>
             <div className="flex-1">
-              <h1 className="text-xl md:text-3xl font-bold leading-tight text-white">
+              <h1 className="text-lg md:text-2xl font-bold leading-tight">
                 <span className="text-green-400">VIZA</span> TRADE
               </h1>
-              <p className="text-sm md:text-base text-gray-300">Global Trade Simplified Visas</p>
+              <p className="text-xs md:text-sm text-gray-300 hidden sm:block">Global Trade Simplified Visas</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export default function Header() {
           {/* Mobile CTA Button and Menu */}
           <div className="flex items-center gap-2">
             <Button
-              className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-4 py-2 font-medium whitespace-nowrap"
+              className="bg-orange-500 hover:bg-orange-600 text-white text-xs md:text-sm px-3 py-2 md:px-4 md:py-2"
               onClick={() => {
                 window.location.href = '/consultation';
               }}
@@ -88,7 +88,7 @@ export default function Header() {
               className="md:hidden text-white hover:bg-teal-700/50 transition-colors duration-200 p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -109,12 +109,12 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700 shadow-xl">
-          <div className="px-4 py-6 space-y-2">
+        <div className="md:hidden bg-teal-800 backdrop-blur-md border-t border-teal-700/50 shadow-lg">
+          <div className="px-4 py-4 space-y-1">
             {/* Home */}
             <Link
               href="/"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700 rounded-lg font-medium transition-all duration-200"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function Header() {
             {/* About */}
             <Link
               href="/about"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <div className="flex items-center gap-3">
@@ -138,85 +138,68 @@ export default function Header() {
             {/* Visa Services */}
             <Link
               href="/visa"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <div className="flex items-center gap-3">
-                <Globe className="w-5 h-5 text-green-400" />
+                <Globe className="w-4 h-4" />
                 Visa Services
               </div>
             </Link>
 
             {/* Work Opportunities */}
-            <Link
-              href="/work"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <div className="flex items-center gap-3">
-                <Globe className="w-5 h-5 text-green-400" />
-                Work Opportunities
-              </div>
-            </Link>
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/work"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Work Opportunities
+                </div>
+              </Link>
+            </div>
 
             {/* Immigration Services */}
-            <Link
-              href="/immigration"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <div className="flex items-center gap-3">
-                <Globe className="w-5 h-5 text-green-400" />
-                Immigration Services
-              </div>
-            </Link>
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/immigration"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Immigration Services
+                </div>
+              </Link>
+            </div>
 
             {/* Other Services */}
-            <Link
-              href="/services"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <div className="flex items-center gap-3">
-                <Globe className="w-5 h-5 text-green-400" />
-                Other Services
-              </div>
-            </Link>
+            <div className="border-b border-teal-700/30 pb-3">
+              <Link
+                href="/services"
+                className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  Other Services
+                </div>
+              </Link>
+            </div>
 
             {/* Contact Us */}
             <Link
               href="/contact"
-              className="block py-3 px-4 text-white hover:text-green-400 hover:bg-teal-700/30 rounded-lg font-medium transition-all duration-200"
+              className="block py-3 px-4 text-gray-200 hover:text-white hover:bg-teal-700/50 rounded-lg font-medium transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-green-400" />
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
                 Contact Us
               </div>
             </Link>
-
-            {/* Contact Info Section */}
-            <div className="border-t border-teal-700/50 pt-4 mt-4">
-              <div className="space-y-3">
-                <Button
-                  variant="ghost"
-                  onClick={() => window.open('tel:8160050554', '_self')}
-                  className="w-full justify-start text-gray-300 hover:text-white hover:bg-teal-700/30"
-                >
-                  <Phone className="w-4 h-4 mr-3 text-green-400" />
-                  +91 8160050554
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  onClick={() => window.open('https://www.instagram.com/viza.trade27?igsh=MXh6OWVzZncwbTFicg==', '_blank')}
-                  className="w-full justify-start text-gray-300 hover:text-white hover:bg-teal-700/30"
-                >
-                  <Instagram className="w-4 h-4 mr-3 text-green-400" />
-                  @viza.trade27
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       )}
