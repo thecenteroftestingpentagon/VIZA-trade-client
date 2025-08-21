@@ -318,24 +318,7 @@ export default function ContactForm() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-r from-orange-600/20 to-purple-600/20 backdrop-blur-sm border-orange-400/30">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    B2B Partnership
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    Looking for business partnerships or corporate visa services? Connect with our business team.
-                  </p>
-                  <Button
-                    className="w-full bg-orange-600 hover:bg-orange-700"
-                    onClick={() => {
-                      window.location.href = '/consultation';
-                    }}
-                  >
-                    🤝 B2B Consultation
-                  </Button>
-                </CardContent>
-              </Card>
+            
             </div>
           </div>
         </div>
