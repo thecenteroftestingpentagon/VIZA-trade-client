@@ -281,7 +281,7 @@ export default function CitizenshipPage() {
                 <Phone className="w-4 h-4 mr-2" />
                 WhatsApp Consultation
               </Button>
-              <Link href="/contact">
+              <Link href="/consultation">
                 <Button variant="outline" className="border-green-400 text-green-400 hover:bg-green-400/10 px-8 py-3">
                   <Mail className="w-4 h-4 mr-2" />
                   Schedule Consultation
